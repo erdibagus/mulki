@@ -1,6 +1,6 @@
 <?php
 $copyright = 'CBT App';
-$serverurl = 'https://localhost/';
+$serverurl = 'https://cbt.sekartama.com/';
 
 define("VERSI", "4");
 define("REVISI", "0");
