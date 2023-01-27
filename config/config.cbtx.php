@@ -1,6 +1,6 @@
 <?php
 $copyright = 'CBT App';
-$serverurl = 'https://cbt.sekartama.com';
+$serverurl = 'https://cbt.idabagus.id';
 
 define("VERSI", "4");
 define("REVISI", "0");
