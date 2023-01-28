@@ -423,7 +423,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 		<div class='content-wrapper' style='background-image: url(backgroun.jpg);background-size: cover;'>
 			<section class='content-header'>
 				<h1>
-					&nbsp;<span class='hidden-xs'><?= $setting['aplikasi'] . '-' . $jenjang ?></span>
+					&nbsp;<span class='hidden-xs'><?= $setting['aplikasi'] . ' - LPK MULKI' ?></span>
 				</h1>
 				<div style='float:right; margin-top:-37px'>
 					<button class='btn  btn-flat  bg-purple'><i class='fa fa-calendar'></i> <?= buat_tanggal('D, d M Y') ?></button>
