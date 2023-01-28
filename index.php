@@ -30,7 +30,7 @@ $tglsekarang = time();
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <title><?= $setting['aplikasi'] ?></title>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
-    <link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/favicon.ico' />
+    <link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/logo.jpeg' />
     <!-- Favicons -->
     <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">

@@ -44,7 +44,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<title>Administrator | <?= $setting['aplikasi'] ?></title>
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-	<link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/favicon.ico' />
+	<link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/logo.jpeg' />
     <!-- Favicons -->
     <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
