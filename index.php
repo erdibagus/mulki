@@ -32,7 +32,7 @@ $tglsekarang = time();
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
     <link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/favicon.ico' />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= $homeurl ?>/dist/img/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?= $homeurl ?>/dist/img/apple-icon-76x76.png">
@@ -43,8 +43,8 @@ $tglsekarang = time();
     <link rel="apple-touch-icon" sizes="180x180" href="<?= $homeurl ?>/dist/img/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="<?= $homeurl ?>/dist/img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= $homeurl ?>/dist/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png"> -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/logo.jpeg">
     <link rel="manifest" href="<?= $homeurl ?>/dist/pwa/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/ms-icon-144x144.png">

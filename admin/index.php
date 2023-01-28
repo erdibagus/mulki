@@ -46,7 +46,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 	<link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/favicon.ico' />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= $homeurl ?>/dist/img/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?= $homeurl ?>/dist/img/apple-icon-76x76.png">
@@ -58,7 +58,8 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
     <link rel="icon" type="image/png" sizes="192x192" href="<?= $homeurl ?>/dist/img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= $homeurl ?>/dist/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png"> -->
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/logo.jpeg">
     <link rel="manifest" href="<?= $homeurl ?>/dist/pwa/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/ms-icon-144x144.png">
@@ -283,7 +284,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 
 									<li><a href='?pg=kelas'><i class='fa fa-angle-double-right fa-fw'></i> <span> Data Kelas</span></a></li>
 									<!-- <li><a href='?pg=ruang'><i class='fa fa-angle-double-right fa-fw'></i> <span> Data Ruangan</span></a></li> -->
-									<li><a href='?pg=level'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Level</span></a></li>
+									<!-- <li><a href='?pg=level'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Level</span></a></li> -->
 									<li><a href='?pg=sesi'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Sesi</span></a></li>
 									<!-- <li><a href='?pg=dataserver'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Server</span></a></li> -->
 								</ul>

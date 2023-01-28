@@ -84,7 +84,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <style class="anchorjs"></style>
     <link href="<?= $homeurl ?>/dist/bootstrap-4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= $homeurl ?>/dist/img/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?= $homeurl ?>/dist/img/apple-icon-76x76.png">
@@ -96,7 +96,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <link rel="icon" type="image/png" sizes="192x192" href="<?= $homeurl ?>/dist/img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= $homeurl ?>/dist/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png"> -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/logo.jpeg">
     <link rel="manifest" href="<?= $homeurl ?>/dist/pwa/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/ms-icon-144x144.png">
