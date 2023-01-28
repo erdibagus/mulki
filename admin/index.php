@@ -282,8 +282,8 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 									<?php endif ?> -->
 
 									<li><a href='?pg=kelas'><i class='fa fa-angle-double-right fa-fw'></i> <span> Data Kelas</span></a></li>
-									<!-- <li><a href='?pg=ruang'><i class='fa fa-angle-double-right fa-fw'></i> <span> Data Ruangan</span></a></li>
-									<li><a href='?pg=level'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Level</span></a></li> -->
+									<!-- <li><a href='?pg=ruang'><i class='fa fa-angle-double-right fa-fw'></i> <span> Data Ruangan</span></a></li> -->
+									<li><a href='?pg=level'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Level</span></a></li>
 									<li><a href='?pg=sesi'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Sesi</span></a></li>
 									<!-- <li><a href='?pg=dataserver'><i class='fas fa-angle-double-right fa-fw'></i> <span> Data Server</span></a></li> -->
 								</ul>
