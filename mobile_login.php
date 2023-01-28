@@ -125,8 +125,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <body class="text-center">
     <div id="particles" style="position: absolute; width: 100%; height: 100%;"></div>
     <form class="form-signin" action="<?= $homeurl ?>/mobile_login.php" method="POST" name="login" style="z-index: 2;">
-        <img class="mb-4" src="<?= $homeurl ?>/dist/img/logoaja.png" alt="" width="100">
-        <h1 class="h3 mb-3 font-weight-normal">Silahkan Masuk</h1>
+        <img src="<?= $homeurl ?>/dist/img/logo.png" alt="" width="250">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" name="username" id="inputUsername" class="form-control mb-2" placeholder="Username"
             required="" autofocus="">
@@ -138,7 +138,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <!-- <p class="mt-3" style="margin-bottom: 0;">
             <a href="registrasi.php">Belum punya akun ? Daftar disini.</a>
         </p> -->
-        <p class="mt-4 mb-3 text-muted"><a href="https://www.instagram.com/erd.bagus/">© 2019-2022</a></p>
+        <p class="mt-4 mb-3 text-muted"><a href="https://www.instagram.com/erd.bagus/">© 2023</a></p>
     </form>
     <script src="<?= $homeurl ?>/dist/vendor/particles.js-master/particles.min.js"></script>
     <script>
