@@ -176,7 +176,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 								<li class='user-header'>
 									<?php
 									if ($pengawas['level'] == 'admin') :
-										echo "<img src='$homeurl/dist/img/avatar-6.jpg' class='img-circle' alt='User Image'>";
+										echo "<img src='$homeurl/dist/img/ava.jpeg' class='img-circle' alt='User Image'>";
 									elseif ($pengawas['level'] == 'guru') :
 										if ($pengawas['foto'] <> '') {
 											echo "<img src='$homeurl/foto/fotoguru/$pengawas[foto]' class='img-circle' alt='User Image'>";
