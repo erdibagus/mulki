@@ -323,7 +323,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 							<a href='#'><i class="fas fa-desktop side-menu-icon fa-fw"></i><span> Menu Ujian </span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
 							<ul class='treeview-menu'>
 								<li><a href='?pg=jadwal'><i class='fas fa-angle-double-right fa-fw'></i> <span> Jadwal Ujian</span></a></li>
-								<li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li>
+								<!-- <li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li> -->
 
 							</ul>
 						</li>
@@ -373,7 +373,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 							<a href='#'><i class="fas fa-desktop side-menu-icon fa-fw"></i><span> Menu Ujian </span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
 							<ul class='treeview-menu'>
 								<li><a href='?pg=jadwal'><i class='fas fa-angle-double-right fa-fw'></i> <span> Jadwal Ujian</span></a></li>
-								<li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li>
+								<!-- <li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li> -->
 
 							</ul>
 						</li>
@@ -394,7 +394,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 							<a href='#'><i class="fas fa-desktop side-menu-icon fa-fw"></i><span> Menu Ujian </span><span class='pull-right-container'> <i class='fa fa-angle-down pull-right'></i> </span></a>
 							<ul class='treeview-menu'>
 								<li><a href='?pg=jadwal'><i class='fas fa-angle-double-right fa-fw'></i> <span> Jadwal Ujian</span></a></li>
-								<li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li>
+								<!-- <li><a href='?pg=reset'><i class='fas fa-angle-double-right  fa-fw'></i> <span>Reset Ujian</span></a></li> -->
 
 							</ul>
 						</li>
@@ -3291,7 +3291,7 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 														<?php if($_SESSION['level'] != 'pengawas') { ?>
 														<th>Nilai</th>
 														<?php } ?>
-														<th>Ip Address</th>
+														<!-- <th>Ip Address</th> -->
 														<th>Status</th>
 														<th>Aksi</th>
 													</tr>
@@ -3357,9 +3357,10 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 																return hasil;
 															}
 														},
-														<?php } ?>{
-															data : 'ip'
-														},
+														<?php } ?>
+														// {
+														// 	data : 'ip'
+														// },
 														{
 															data : 'keterangan',
 															render: function(d) {

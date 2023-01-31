@@ -72,7 +72,7 @@ $kelas = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM kelas WHERE id
 										QRcode::png($setting['ip_server'], $tempatip, 'M', 1);
 									}
 									?>
-								<img src='../foto/logo_tut.svg' height='60px'>
+								<img src='../foto/kendal-logo.png' height='60px'>
 							</td>
 							<td style="text-align:center">
 								<!-- <b>
