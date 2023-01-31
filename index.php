@@ -662,11 +662,11 @@ $tglsekarang = time();
                                                 <td width='10'>:</td>
                                                 <td><?= $siswa['id_kelas'] ?></td>
                                             </tr>
-                                            <tr>
+                                            <!-- <tr>
                                                 <th>Mata Pelajaran</th>
                                                 <td width='10'>:</td>
                                                 <td><?= $mapel['nama'] ?></td>
-                                            </tr>
+                                            </tr> -->
                                             <tr>
                                                 <th>Nama Ujian</th>
                                                 <td width='10'>:</td>
@@ -705,11 +705,170 @@ $tglsekarang = time();
                                                                     endif;
                                                                     ?>
                                                                     <tr>
-                                                                        <td><?= $no ?></td>
-                                                                        <td><?= $soal['soal'] ?></td>
+                                                                    <td style='width:30px'>
+                                                                        <?= $soal['nomor'] ?>
+                                                                    </td>
+                                                                    <td style="text-align:justify">
+                                                                        <?php
+                                                                        if ($soal['file'] <> '') :
+                                                                            $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                            $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                            $ext = explode(".", $soal['file']);
+                                                                            $ext = end($ext);
+                                                                            if (in_array($ext, $image)) {
+                                                                                echo "<p style='margin-bottom: 5px'><img src='$homeurl/files/$soal[file]' style='max-width:200px;'/></p>";
+                                                                            } elseif (in_array($ext, $audio)) {
+                                                                                echo "<p style='margin-bottom: 5px'><audio controls><source src='$homeurl/files/$soal[file]' type='audio/$ext'>Your browser does not support the audio tag.</audio></p>";
+                                                                            } else {
+                                                                                echo "File tidak didukung!";
+                                                                            }
+                                                                        endif;
+                                                                        ?>
+                                                                        <?= $soal['soal']; ?>
+                                                                        <?php
+                                                                        if ($soal['file1'] <> '') :
+                                                                            $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                            $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                            $ext = explode(".", $soal['file1']);
+                                                                            $ext = end($ext);
+                                                                            if (in_array($ext, $image)) {
+                                                                                echo "<p style='margin-top: 5px'><img src='$homeurl/files/$soal[file1]' style='max-width:200px;' /></p>";
+                                                                            } elseif (in_array($ext, $audio)) {
+                                                                                echo "<p style='margin-top: 5px'><audio controls><source src='$homeurl/files/$soal[file1]' type='audio/$ext'>Your browser does not support the audio tag.</audio></p>";
+                                                                            } else {
+                                                                                echo "File tidak didukung!";
+                                                                            }
+                                                                        endif;
+                                                                        ?>
+                                                                        <table width=100%>
+                                                                            <tr>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">A.</td>
+                                                                                <td style="padding: 3px;width: 31%; vertical-align: text-top;">
+                                                                                    <?php
+                                                                                    if ($soal['pilA'] <> '') {
+                                                                                        echo "$soal[pilA] ";
+                                                                                    }
 
-                                                                        <td style='text-align:center'><?= $status ?></td>
-                                                                    </tr>
+                                                                                    if ($soal['fileA'] <> '') {
+                                                                                        $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                                        $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                                        $ext = explode(".", $soal['fileA']);
+                                                                                        $ext = end($ext);
+                                                                                        if (in_array($ext, $image)) {
+                                                                                            echo "<img src='$homeurl/files/$soal[fileA]' style='max-width:100px;'/>";
+                                                                                        } elseif (in_array($ext, $audio)) {
+                                                                                            echo "<audio controls><source src='$homeurl/files/$soal[fileA]' type='audio/$ext'>Your browser does not support the audio tag.</audio>";
+                                                                                        } else {
+                                                                                            echo "File tidak didukung!";
+                                                                                        }
+                                                                                    }
+                                                                                    ?>
+                                                                                </td>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">C.</td>
+                                                                                <td style="padding: 3px;width: 31%; vertical-align: text-top;">
+                                                                                    <?php
+                                                                                    if (!$soal['pilC'] == "") {
+                                                                                        echo "$soal[pilC] ";
+                                                                                    }
+
+                                                                                    if ($soal['fileC'] <> '') {
+                                                                                        $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                                        $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                                        $ext = explode(".", $soal['fileC']);
+                                                                                        $ext = end($ext);
+                                                                                        if (in_array($ext, $image)) {
+                                                                                            echo "<img src='$homeurl/files/$soal[fileC]' style='max-width:100px;' />";
+                                                                                        } elseif (in_array($ext, $audio)) {
+                                                                                            echo "<audio controls><source src='$homeurl/files/$soal[fileC]' type='audio/$ext'>Your browser does not support the audio tag.</audio>";
+                                                                                        } else {
+                                                                                            echo "File tidak didukung!";
+                                                                                        }
+                                                                                    }
+                                                                                    ?>
+                                                                                </td>
+                                                                                <?php if ($namamapel['opsi'] == 5) : ?>
+                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">E.</td>
+                                                                                    <td style="padding: 3px; vertical-align: text-top;">
+                                                                                        <?php
+                                                                                        if (!$soal['pilE'] == "") {
+                                                                                            echo "$soal[pilE] ";
+                                                                                        }
+
+                                                                                        if ($soal['fileE'] <> '') {
+                                                                                            $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                                            $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                                            $ext = explode(".", $soal['fileE']);
+                                                                                            $ext = end($ext);
+                                                                                            if (in_array($ext, $image)) {
+                                                                                                echo "<img src='$homeurl/files/$soal[fileE]' style='max-width:100px;' />";
+                                                                                            } elseif (in_array($ext, $audio)) {
+                                                                                                echo "<audio controls><source src='$homeurl/files/$soal[fileE]' type='audio/$ext'>Your browser does not support the audio tag.</audio>";
+                                                                                            } else {
+                                                                                                echo "File tidak didukung!";
+                                                                                            }
+                                                                                        }
+                                                                                        ?>
+                                                                                    </td>
+                                                                                <?php endif; ?>
+
+                                                                            </tr>
+
+                                                                            <tr>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">B.</td>
+                                                                                <td style="padding: 3px;width: 31%; vertical-align: text-top;">
+                                                                                    <?php
+                                                                                    if (!$soal['pilB'] == "") {
+                                                                                        echo "$soal[pilB] ";
+                                                                                    }
+
+                                                                                    if ($soal['fileB'] <> '') {
+                                                                                        $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                                        $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                                        $ext = explode(".", $soal['fileB']);
+                                                                                        $ext = end($ext);
+                                                                                        if (in_array($ext, $image)) {
+                                                                                            echo "<img src='$homeurl/files/$soal[fileB]' style='max-width:100px;' />";
+                                                                                        } elseif (in_array($ext, $audio)) {
+                                                                                            echo "<audio controls><source src='$homeurl/files/$soal[fileB]' type='audio/$ext'>Your browser does not support the audio tag.</audio>";
+                                                                                        } else {
+                                                                                            echo "File tidak didukung!";
+                                                                                        }
+                                                                                    }
+                                                                                    ?>
+                                                                                </td>
+                                                                                <?php if ($namamapel['opsi'] <> 3) : ?>
+                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">D.</td>
+                                                                                    <td style="padding: 3px;width: 31%; vertical-align: text-top;">
+                                                                                        <?php
+                                                                                        if (!$soal['pilD'] == "") {
+                                                                                            echo "$soal[pilD] ";
+                                                                                        }
+
+                                                                                        if ($soal['fileD'] <> '') {
+                                                                                            $audio = array('mp3', 'wav', 'ogg', 'MP3', 'WAV', 'OGG');
+                                                                                            $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 'BMP');
+                                                                                            $ext = explode(".", $soal['fileD']);
+                                                                                            $ext = end($ext);
+                                                                                            if (in_array($ext, $image)) {
+                                                                                                echo "<img src='$homeurl/files/$soal[fileD]' style='max-width:100px;' />";
+                                                                                            } elseif (in_array($ext, $audio)) {
+                                                                                                echo "<audio controls><source src='$homeurl/files/$soal[fileD]' type='audio/$ext'>Your browser does not support the audio tag.</audio>";
+                                                                                            } else {
+                                                                                                echo "File tidak didukung!";
+                                                                                            }
+                                                                                        }
+                                                                                        ?>
+                                                                                    </td>
+
+                                                                                <?php endif; ?>
+
+                                                                            </tr>
+
+                                                                        </table>
+                                                                        <b> Kunci : <?= $soal['jawaban'] ?> </b>
+                                                                    </td>
+                                                                    <td style='text-align:center'><?= $status ?></td>
+                                                                </tr>
                                                                 <?php endforeach; ?>
                                                             </tbody>
                                                         </table>
