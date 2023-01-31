@@ -136,6 +136,9 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 				<a style="color:#000" href='#' class='sidebar-baru' data-toggle='offcanvas' role='button'>
 					<i class="fa fa-bars fa-lg fa-fw"></i>
 				</a>
+				<span class='hidden-md hidden-lg hidden-sm'>
+					<img src="<?= $homeurl . '/' . $setting['logo'] ?>" height="50px">
+				</span>
 				<div class='navbar-custom-menu'>
 					<ul class='nav navbar-nav'>
 						<!-- <?php if ($pengawas['level'] == 'admin') : ?>
