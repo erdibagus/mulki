@@ -847,7 +847,7 @@ if ($ac == '') :
 														?>
 														<table width=100%>
 															<tr>
-																<td style="padding: 3px;width: 2%; vertical-align: text-top;">A.</td>
+																<td style="padding: 3px;width: 2%; vertical-align: text-top;">1.</td>
 																<td style="padding: 3px;width: 31%; vertical-align: text-top;">
 																	<?php
 																	if ($soal['pilA'] <> '') {
@@ -869,7 +869,7 @@ if ($ac == '') :
 																	}
 																	?>
 																</td>
-																<td style="padding: 3px;width: 2%; vertical-align: text-top;">C.</td>
+																<td style="padding: 3px;width: 2%; vertical-align: text-top;">3.</td>
 																<td style="padding: 3px;width: 31%; vertical-align: text-top;">
 																	<?php
 																	if (!$soal['pilC'] == "") {
@@ -892,7 +892,7 @@ if ($ac == '') :
 																	?>
 																</td>
 																<?php if ($namamapel['opsi'] == 5) : ?>
-																	<td style="padding: 3px;width: 2%; vertical-align: text-top;">E.</td>
+																	<td style="padding: 3px;width: 2%; vertical-align: text-top;">5.</td>
 																	<td style="padding: 3px; vertical-align: text-top;">
 																		<?php
 																		if (!$soal['pilE'] == "") {
@@ -919,7 +919,7 @@ if ($ac == '') :
 															</tr>
 
 															<tr>
-																<td style="padding: 3px;width: 2%; vertical-align: text-top;">B.</td>
+																<td style="padding: 3px;width: 2%; vertical-align: text-top;">2.</td>
 																<td style="padding: 3px;width: 31%; vertical-align: text-top;">
 																	<?php
 																	if (!$soal['pilB'] == "") {
@@ -942,7 +942,7 @@ if ($ac == '') :
 																	?>
 																</td>
 																<?php if ($namamapel['opsi'] <> 3) : ?>
-																	<td style="padding: 3px;width: 2%; vertical-align: text-top;">D.</td>
+																	<td style="padding: 3px;width: 2%; vertical-align: text-top;">4.</td>
 																	<td style="padding: 3px;width: 31%; vertical-align: text-top;">
 																		<?php
 																		if (!$soal['pilD'] == "") {
@@ -970,7 +970,18 @@ if ($ac == '') :
 															</tr>
 
 														</table>
-														<b> Kunci : <?= $soal['jawaban'] ?> </b>
+														<b> Kunci : <?php if($soal['jawaban'] == "A"): ?>
+																	1
+																	<?php elseif($soal['jawaban'] == "B"): ?>
+																	2
+																	<?php elseif($soal['jawaban'] == "C"): ?>
+																	3
+																	<?php elseif($soal['jawaban'] == "D"): ?>
+																	4
+																	<?php else: ?>
+																	5
+																	<?php endif; ?>
+														</b>
 													</td>
 													<td style='width:30px'>
 														<a><button class='btn bg-maroon btn-sm' data-toggle='modal' data-target="#hapus<?= $soal['id_soal'] ?>"><i class='fa fa-trash'></i></button></a>

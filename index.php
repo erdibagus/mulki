@@ -732,7 +732,7 @@ $tglsekarang = time();
                                                                         ?>
                                                                         <table width=100%>
                                                                             <tr>
-                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">A.</td>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">1.</td>
                                                                                 <td style="padding: 3px;width: 31%; vertical-align: text-top;">
                                                                                     <?php
                                                                                     if ($soal['pilA'] <> '') {
@@ -754,7 +754,7 @@ $tglsekarang = time();
                                                                                     }
                                                                                     ?>
                                                                                 </td>
-                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">C.</td>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">3.</td>
                                                                                 <td style="padding: 3px;width: 31%; vertical-align: text-top;">
                                                                                     <?php
                                                                                     if (!$soal['pilC'] == "") {
@@ -777,7 +777,7 @@ $tglsekarang = time();
                                                                                     ?>
                                                                                 </td>
                                                                                 <?php if ($namamapel['opsi'] == 5) : ?>
-                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">E.</td>
+                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">5.</td>
                                                                                     <td style="padding: 3px; vertical-align: text-top;">
                                                                                         <?php
                                                                                         if (!$soal['pilE'] == "") {
@@ -804,7 +804,7 @@ $tglsekarang = time();
                                                                             </tr>
 
                                                                             <tr>
-                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">B.</td>
+                                                                                <td style="padding: 3px;width: 2%; vertical-align: text-top;">2.</td>
                                                                                 <td style="padding: 3px;width: 31%; vertical-align: text-top;">
                                                                                     <?php
                                                                                     if (!$soal['pilB'] == "") {
@@ -827,7 +827,7 @@ $tglsekarang = time();
                                                                                     ?>
                                                                                 </td>
                                                                                 <?php if ($namamapel['opsi'] <> 3) : ?>
-                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">D.</td>
+                                                                                    <td style="padding: 3px;width: 2%; vertical-align: text-top;">4.</td>
                                                                                     <td style="padding: 3px;width: 31%; vertical-align: text-top;">
                                                                                         <?php
                                                                                         if (!$soal['pilD'] == "") {
@@ -855,9 +855,32 @@ $tglsekarang = time();
                                                                             </tr>
 
                                                                         </table>
-                                                                        <b> Kunci : <?= $soal['jawaban'] ?> </b>
+                                                                        <b> Kunci : <?php if($soal['jawaban'] == "A"): ?>
+                                                                                    1
+                                                                                    <?php elseif($soal['jawaban'] == "B"): ?>
+                                                                                    2
+                                                                                    <?php elseif($soal['jawaban'] == "C"): ?>
+                                                                                    3
+                                                                                    <?php elseif($soal['jawaban'] == "D"): ?>
+                                                                                    4
+                                                                                    <?php else: ?>
+                                                                                    5
+                                                                                    <?php endif; ?>
+                                                                        </b>
                                                                     </td>
-                                                                    <td style='text-align:center'><?= $value ?></td> 
+                                                                    <td style='text-align:center'>
+                                                                        <?php if($value == "A"): ?>
+                                                                        1
+                                                                        <?php elseif($value == "B"): ?>
+                                                                        2
+                                                                        <?php elseif($value == "C"): ?>
+                                                                        3
+                                                                        <?php elseif($value == "D"): ?>
+                                                                        4
+                                                                        <?php else: ?>
+                                                                        5
+                                                                        <?php endif; ?>
+                                                                    </td> 
                                                                     <td style='text-align:center'><?= $status ?></td>
                                                                 </tr>
                                                                 <?php endforeach; ?>

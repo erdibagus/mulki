@@ -316,7 +316,19 @@ defined('APLIKASI') or exit('Anda tidak dizinkan mengakses langsung script ini!'
                                     <tr>
                                         <td><?= $no ?></td>
                                         <td><?= $soal['soal'] ?></td>
-                                        <td style='text-align:center'><?= $value ?></td>
+                                        <td style='text-align:center'>
+                                            <?php if($value == "A"): ?>
+                                            1
+                                            <?php elseif($value == "B"): ?>
+                                            2
+                                            <?php elseif($value == "C"): ?>
+                                            3
+                                            <?php elseif($value == "D"): ?>
+                                            4
+                                            <?php else: ?>
+                                            5
+                                            <?php endif; ?>
+                                        </td>
                                         <td style='text-align:center'><?= $status ?></td>
                                     </tr>
                                 <?php endforeach; ?>
