@@ -44,25 +44,12 @@ $ujian = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM ujian where statu
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<title>Administrator | <?= $setting['aplikasi'] ?></title>
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-	<link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/logo.jpeg' />
+	<link rel='shortcut icon' href='<?= $homeurl ?>/dist/img/favicon.png' />
     <!-- Favicons -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?= $homeurl ?>/dist/img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= $homeurl ?>/dist/img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?= $homeurl ?>/dist/img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?= $homeurl ?>/dist/img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?= $homeurl ?>/dist/img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= $homeurl ?>/dist/img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= $homeurl ?>/dist/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?= $homeurl ?>/dist/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= $homeurl ?>/dist/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png"> -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/logo.jpeg">
+	<link rel="icon" type="image/png" href="<?= $homeurl ?>/dist/img/favicon.png">
     <link rel="manifest" href="<?= $homeurl ?>/dist/pwa/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/favicon.png">
     <meta name="theme-color" content="#ffffff">
 
 	<link rel='stylesheet' href='<?= $homeurl ?>/dist/bootstrap/css/bootstrap.min.css' />

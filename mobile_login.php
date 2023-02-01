@@ -72,8 +72,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="E-Learning CBT">
-    <meta name="author" content="e-learning, smk, spm, sd, smp, lms">
+    <meta name="description" content="CBT Mulki">
+    <meta name="author" content="E-learning Korea">
 
     <meta name="docsearch:language" content="en">
     <meta name="docsearch:version" content="4.5">
@@ -84,23 +84,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <style class="anchorjs"></style>
     <link href="<?= $homeurl ?>/dist/bootstrap-4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Favicons -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="<?= $homeurl ?>/dist/img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?= $homeurl ?>/dist/img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?= $homeurl ?>/dist/img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= $homeurl ?>/dist/img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?= $homeurl ?>/dist/img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?= $homeurl ?>/dist/img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?= $homeurl ?>/dist/img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= $homeurl ?>/dist/img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= $homeurl ?>/dist/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?= $homeurl ?>/dist/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= $homeurl ?>/dist/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= $homeurl ?>/dist/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon-16x16.png"> -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/logo.jpeg">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $homeurl ?>/dist/img/favicon.png">
     <link rel="manifest" href="<?= $homeurl ?>/dist/pwa/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="<?= $homeurl ?>/dist/img/favicon.png">
     <meta name="theme-color" content="#ffffff">
 
     <style>

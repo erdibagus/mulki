@@ -4,6 +4,7 @@ error_reporting(0);
 (isset($_SESSION['id_user'])) ? $id_user = $_SESSION['id_user'] : $id_user = 0;
 
 //LOCALHOST
+
 // $uri = $_SERVER['REQUEST_URI'];
 // $pageurl = explode("/", $uri);
 // if ($uri == '/') {
@@ -17,6 +18,7 @@ error_reporting(0);
 //     (isset($pageurl[3])) ? $ac = $pageurl[3] : $ac = '';
 //     (isset($pageurl[4])) ? $id = $pageurl[4] : $id = 0;
 // }
+
 //HAPUS SAMPAI SINI
 
 //DOMAIN
