@@ -157,21 +157,21 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='A' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'A','A',1,<?= $ac ?>)" <?= $ax ?> />
                                                 <label class='button-label' for='A'>
-                                                    <h1>A</h1>
+                                                    <h1>1</h1>
                                                 </label>
                                             </td>
 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='C' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'C','C',1,<?= $ac ?>)" <?= $cx ?> />
                                                 <label class='button-label' for='C'>
-                                                    <h1>C</h1>
+                                                    <h1>3</h1>
                                                 </label>
                                             </td>
                                             <?php if ($mapel[0]['opsi'] == 5) { ?>
                                                 <td>
                                                     <input class='hidden radio-label' type='radio' name='jawab' id='E' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'E','E',1,<?= $ac ?>)" <?= $ex ?> />
                                                     <label class='button-label' for='E'>
-                                                        <h1>E</h1>
+                                                        <h1>5</h1>
                                                     </label>
 
                                                 </td>
@@ -181,14 +181,14 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='B' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'B','B',1,<?= $ac ?>)" <?= $bx ?> />
                                                 <label class='button-label' for='B'>
-                                                    <h1>B</h1>
+                                                    <h1>2</h1>
                                                 </label>
                                             </td>
                                             <?php if ($mapel[0]['opsi'] <> 3) { ?>
                                                 <td>
                                                     <input class='hidden radio-label' type='radio' name='jawab' id='D' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'D','D',1,<?= $ac ?>)" <?= $dx ?> />
                                                     <label class='button-label' for='D'>
-                                                        <h1>D</h1>
+                                                        <h1>4</h1>
                                                     </label>
                                                 </td>
                                             <?php } ?>
@@ -201,7 +201,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td width='60'>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='A' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'<?= $pil1 ?>','A',1,<?= $ac ?>)" <?= $a ?> />
                                                 <label class='button-label' for='A'>
-                                                    <h1>A</h1>
+                                                    <h1>1</h1>
                                                 </label>
                                             </td>
                                             <td style='vertical-align:middle;'>
@@ -226,7 +226,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td width='60'>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='B' onclick="jawabsoal(<?= $id_mapel ?>, <?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'<?= $pil2 ?>','B',1, <?= $ac ?>)" <?= $b ?> />
                                                 <label class='button-label' for='B'>
-                                                    <h1>B</h1>
+                                                    <h1>2</h1>
                                                 </label>
                                             </td>
                                             <td style='vertical-align:middle;'>
@@ -251,7 +251,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='C' onclick="jawabsoal(<?= $id_mapel ?>, <?= $id_siswa ?>, <?= $soal['id_soal'] ?>,'<?= $pil3 ?>','C',1,<?= $ac ?>)" <?= $c ?> />
                                                 <label class='button-label' for='C'>
-                                                    <h1>C</h1>
+                                                    <h1>3</h1>
                                                 </label>
                                             </td>
                                             <td style='vertical-align:middle;'>
@@ -276,7 +276,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                 <td>
                                                     <input class='hidden radio-label' type='radio' name='jawab' id='D' onclick="jawabsoal(<?= $id_mapel ?>, <?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'<?= $pil4 ?>','D',1,<?= $ac ?>)" <?= $d ?> />
                                                     <label class='button-label' for='D'>
-                                                        <h1>D</h1>
+                                                        <h1>4</h1>
                                                     </label>
                                                 </td>
                                                 <td style='vertical-align:middle;'>
@@ -302,7 +302,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                 <td>
                                                     <input class='hidden radio-label' type='radio' name='jawab' id='E' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'<?= $pil5 ?>','E',1,<?= $ac ?>)" <?= $e ?> />
                                                     <label class='button-label' for='E'>
-                                                        <h1>E</h1>
+                                                        <h1>5</h1>
                                                     </label>
                                                 </td>
                                                 <td style='vertical-align:middle;'>
@@ -343,7 +343,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                         <td width='60'>
                                             <input class='hidden radio-label' type='radio' name='jawab' id='A' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'A','A',1,<?= $ac ?>)" <?= $a ?> />
                                             <label class='button-label' for='A'>
-                                                <h1>A</h1>
+                                                <h1>1</h1>
                                             </label>
                                         </td>
                                         <td style='vertical-align:middle;'>
@@ -367,7 +367,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                         <td>
                                             <input class='hidden radio-label' type='radio' name='jawab' id='B' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'B','B',1,<?= $ac ?>)" <?= $b ?> />
                                             <label class='button-label' for='B'>
-                                                <h1>B</h1>
+                                                <h1>2</h1>
                                             </label>
                                         </td>
                                         <td style='vertical-align:middle;'>
@@ -391,7 +391,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                         <td>
                                             <input class='hidden radio-label' type='radio' name='jawab' id='C' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'C','C',1,<?= $ac ?>)" <?= $c ?> />
                                             <label class='button-label' for='C'>
-                                                <h1>C</h1>
+                                                <h1>3</h1>
                                             </label>
 
                                         </td>
@@ -417,7 +417,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='D' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'D','D',1,<?= $ac ?>)" <?= $d ?> />
                                                 <label class='button-label' for='D'>
-                                                    <h1>D</h1>
+                                                    <h1>4</h1>
                                                 </label>
                                             </td>
                                             <td style='vertical-align:middle;'>
@@ -443,7 +443,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                             <td>
                                                 <input class='hidden radio-label' type='radio' name='jawab' id='E' onclick="jawabsoal(<?= $id_mapel ?>,<?= $id_siswa ?>,<?= $soal['id_soal'] ?>,'E','E',1,<?= $ac ?>)" <?= $e ?> />
                                                 <label class='button-label' for='E'>
-                                                    <h1>E</h1>
+                                                    <h1>5</h1>
                                                 </label>
                                             </td>
                                             <td style='vertical-align:middle;'>

@@ -678,7 +678,7 @@ $tglsekarang = time();
                                                                 <tr>
                                                                     <th width='5px'>#</th>
                                                                     <th>Soal PG</th>
-
+                                                                    <th style='text-align:center'>Jawaban</th>
                                                                     <th style='text-align:center'>Hasil</th>
                                                                 </tr>
                                                             </thead>
@@ -857,6 +857,7 @@ $tglsekarang = time();
                                                                         </table>
                                                                         <b> Kunci : <?= $soal['jawaban'] ?> </b>
                                                                     </td>
+                                                                    <td style='text-align:center'><?= $value ?></td> 
                                                                     <td style='text-align:center'><?= $status ?></td>
                                                                 </tr>
                                                                 <?php endforeach; ?>
