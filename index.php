@@ -863,7 +863,7 @@ $tglsekarang = time();
                                                                                     3
                                                                                     <?php elseif($soal['jawaban'] == "D"): ?>
                                                                                     4
-                                                                                    <?php else: ?>
+                                                                                    <?php elseif($soal['jawaban'] == "E"): ?>
                                                                                     5
                                                                                     <?php endif; ?>
                                                                         </b>

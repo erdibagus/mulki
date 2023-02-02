@@ -72,7 +72,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                 if (in_array($ext, $image)) {
                                     echo "<span  id='zoom' style='display:inline-block'> <img  src='$homeurl/files/$soal[file]' class='img-responsive'/></span>";
                                 } elseif (in_array($ext, $audio)) {
-                                    echo "<audio controls='controls' ><source src='$homeurl/files/$soal[file]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                    echo   "<audio volume='1.0' id='audio-player' onended='audio_ended()'>
+                                                <source src='$homeurl/files/$soal[file]' type='audio/$ext' style='width:100%;'/>
+                                                Your browser does not support the audio tag.
+                                            </audio>
+                                            <div style='max-width:350px' id='audio-control'>
+                                                <div class='card'>
+                                                    <div class='card-body'>
+                                                        <input type='hidden' id='audio-player-status' value='0' />
+                                                        <input type='hidden' id='audio-player-update' value='0' />
+                                                        <a class='btn btn-app' onclick='audio()'>
+                                                            <i class='fa fa-play' id='audio-player-judul-logo'></i> <span id='audio-player-judul'>Play</span>
+                                                        </a>
+                                                        &nbsp;&nbsp;Klik Play untuk memutar Audio
+                                                    </div>
+                                                </div>
+                                            </div>";
                                 } else {
                                     echo "File tidak didukung!";
                                 }
@@ -83,7 +98,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                 if (in_array($ext, $image)) {
                                     echo "<span  id='zoom1' style='display:inline-block'> <img  src='$homeurl/files/$soal[file1]' class='img-responsive'/></span>";
                                 } elseif (in_array($ext, $audio)) {
-                                    echo "<audio controls='controls' ><source src='$homeurl/files/$soal[file1]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                    echo "  <audio volume='1.0' id='audio-player2' onended='audio_ended2()'>
+                                                <source src='$homeurl/files/$soal[file1]' type='audio/$ext' style='width:100%;'/>
+                                                Your browser does not support the audio tag.
+                                            </audio>
+                                            <div style='max-width:350px' id='audio-control2'>
+                                                <div class='card'>
+                                                    <div class='card-body'>
+                                                        <input type='hidden' id='audio-player-status2' value='0' />
+                                                        <input type='hidden' id='audio-player-update2' value='0' />
+                                                        <a class='btn btn-app' onclick='audio2()'>
+                                                            <i class='fa fa-play' id='audio-player-judul-logo2'></i> <span id='audio-player-judul2'>Play</span>
+                                                        </a>
+                                                        &nbsp;&nbsp;Klik Play untuk memutar Audio
+                                                    </div>
+                                                </div>
+                                            </div>";
                                 } else {
                                     echo "File tidak didukung!";
                                 }
@@ -213,7 +243,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                     if (in_array($ext, $image)) :
                                                         echo "<span  class='lup' style='display:inline-block'><img src='$homeurl/files/$soal[$fileAA]' class='img-responsive' style='width:250px;'/></span>";
                                                     elseif (in_array($ext, $audio)) :
-                                                        echo "<audio controls='controls' ><source src='$homeurl/files/$soal[$fileAA]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                        echo "  <audio volume='1.0' id='audio-player3' onended='audio_ended3()'>
+                                                                    <source src='$homeurl/files/$soal[$fileAA]' type='audio/$ext' style='width:100%;'/>
+                                                                    Your browser does not support the audio tag.
+                                                                </audio>
+                                                                <div style='max-width:350px' id='audio-control3'>
+                                                                    <div class='card'>
+                                                                        <div class='card-body'>
+                                                                            <input type='hidden' id='audio-player-status3' value='0' />
+                                                                            <input type='hidden' id='audio-player-update3' value='0' />
+                                                                            <a class='btn btn-app' onclick='audio3()'>
+                                                                                <i class='fa fa-play' id='audio-player-judul-logo3'></i> <span id='audio-player-judul3'>Play</span>
+                                                                            </a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>";
                                                     else :
                                                         echo "File tidak didukung!";
                                                     endif;
@@ -238,7 +283,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                     if (in_array($ext, $image)) :
                                                         echo "<span  class='lup' style='display:inline-block'><img src='$homeurl/files/$soal[$fileBB]' class='img-responsive' style='width:250px;'/></span>";
                                                     elseif (in_array($ext, $audio)) :
-                                                        echo "<audio controls='controls' ><source src='$homeurl/files/$soal[$fileBB]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                        echo "  <audio volume='1.0' id='audio-player4' onended='audio_ended4()'>
+                                                                    <source src='$homeurl/files/$soal[$fileBB]' type='audio/$ext' style='width:100%;'/>
+                                                                    Your browser does not support the audio tag.
+                                                                </audio>
+                                                                <div style='max-width:350px' id='audio-control4'>
+                                                                    <div class='card'>
+                                                                        <div class='card-body'>
+                                                                            <input type='hidden' id='audio-player-status4' value='0' />
+                                                                            <input type='hidden' id='audio-player-update4' value='0' />
+                                                                            <a class='btn btn-app' onclick='audio4()'>
+                                                                                <i class='fa fa-play' id='audio-player-judul-logo4'></i> <span id='audio-player-judul4'>Play</span>
+                                                                            </a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>";
                                                     else :
                                                         echo "File tidak didukung!";
                                                     endif;
@@ -263,7 +323,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                     if (in_array($ext, $image)) {
                                                         echo "<span  class='lup' style='display:inline-block'><img src='$homeurl/files/$soal[$fileCC]' class='img-responsive' style='width:250px;'/></span>";
                                                     } elseif (in_array($ext, $audio)) {
-                                                        echo "<audio controls='controls' ><source src='$homeurl/files/$soal[$fileCC]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                        echo "  <audio volume='1.0' id='audio-player5' onended='audio_ended5()'>
+                                                                    <source src='$homeurl/files/$soal[$fileCC]' type='audio/$ext' style='width:100%;'/>
+                                                                    Your browser does not support the audio tag.
+                                                                </audio>
+                                                                <div style='max-width:350px' id='audio-control5'>
+                                                                    <div class='card'>
+                                                                        <div class='card-body'>
+                                                                            <input type='hidden' id='audio-player-status5' value='0' />
+                                                                            <input type='hidden' id='audio-player-update5' value='0' />
+                                                                            <a class='btn btn-app' onclick='audio5()'>
+                                                                                <i class='fa fa-play' id='audio-player-judul-logo5'></i> <span id='audio-player-judul5'>Play</span>
+                                                                            </a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>";
                                                     } else {
                                                         echo "File tidak didukung!";
                                                     }
@@ -288,7 +363,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                         if (in_array($ext, $image)) {
                                                             echo "<span  class='lup' style='display:inline-block'><img src='$homeurl/files/$soal[$fileDD]' class='img-responsive' style='width:250px;'/></span>";
                                                         } elseif (in_array($ext, $audio)) {
-                                                            echo "<audio controls='controls' ><source src='$homeurl/files/$soal[$fileDD]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                            echo "  <audio volume='1.0' id='audio-player6' onended='audio_ended6()'>
+                                                                        <source src='$homeurl/files/$soal[$fileDD]' type='audio/$ext' style='width:100%;'/>
+                                                                        Your browser does not support the audio tag.
+                                                                    </audio>
+                                                                    <div style='max-width:350px' id='audio-control6'>
+                                                                        <div class='card'>
+                                                                            <div class='card-body'>
+                                                                                <input type='hidden' id='audio-player-status6' value='0' />
+                                                                                <input type='hidden' id='audio-player-update6' value='0' />
+                                                                                <a class='btn btn-app' onclick='audio6()'>
+                                                                                    <i class='fa fa-play' id='audio-player-judul-logo6'></i> <span id='audio-player-judul6'>Play</span>
+                                                                                </a>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>";
                                                         } else {
                                                             echo "File tidak didukung!";
                                                         }
@@ -314,7 +404,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                         if (in_array($ext, $image)) {
                                                             echo "<span  class='lup' style='display:inline-block'><img src='$homeurl/files/$soal[$fileEE]' class='img-responsive' style='width:250px;'/></span>";
                                                         } elseif (in_array($ext, $audio)) {
-                                                            echo "<audio controls='controls' ><source src='$homeurl/files/$soal[$fileEE]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                            echo "  <audio volume='1.0' id='audio-player7' onended='audio_ended7()'>
+                                                                        <source src='$homeurl/files/$soal[$fileEE]' type='audio/$ext' style='width:100%;'/>
+                                                                        Your browser does not support the audio tag.
+                                                                    </audio>
+                                                                    <div style='max-width:350px' id='audio-control7'>
+                                                                        <div class='card'>
+                                                                            <div class='card-body'>
+                                                                                <input type='hidden' id='audio-player-status7' value='0' />
+                                                                                <input type='hidden' id='audio-player-update7' value='0' />
+                                                                                <a class='btn btn-app' onclick='audio7()'>
+                                                                                    <i class='fa fa-play' id='audio-player-judul-logo7'></i> <span id='audio-player-judul7'>Play</span>
+                                                                                </a>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>";
                                                         } else {
                                                             echo "File tidak didukung!";
                                                         }
@@ -355,7 +460,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                 if (in_array($ext, $image)) {
                                                     echo "<img src='$homeurl/files/$soal[fileA]' class='img-responsive' style='max-width:300px;'/>";
                                                 } elseif (in_array($ext, $audio)) {
-                                                    echo "<audio controls='controls'><source src='$homeurl/files/$soal[fileA]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                    echo "  <audio volume='1.0' id='audio-player8' onended='audio_ended8()'>
+                                                                <source src='$homeurl/files/$soal[fileA]' type='audio/$ext' style='width:100%;'/>
+                                                                Your browser does not support the audio tag.
+                                                            </audio>
+                                                            <div style='max-width:350px' id='audio-control8'>
+                                                                <div class='card'>
+                                                                    <div class='card-body'>
+                                                                        <input type='hidden' id='audio-player-status8' value='0' />
+                                                                        <input type='hidden' id='audio-player-update8' value='0' />
+                                                                        <a class='btn btn-app' onclick='audio8()'>
+                                                                            <i class='fa fa-play' id='audio-player-judul-logo8'></i> <span id='audio-player-judul8'>Play</span>
+                                                                        </a>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>";
                                                 } else {
                                                     echo "File tidak didukung!";
                                                 }
@@ -379,7 +499,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                 if (in_array($ext, $image)) {
                                                     echo "<img src='$homeurl/files/$soal[fileB]' class='img-responsive' style='max-width:300px;'/>";
                                                 } elseif (in_array($ext, $audio)) {
-                                                    echo "<audio controls='controls' ><source src='$homeurl/files/$soal[fileB]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                    echo "  <audio volume='1.0' id='audio-player9' onended='audio_ended9()'>
+                                                                <source src='$homeurl/files/$soal[fileB]' type='audio/$ext' style='width:100%;'/>
+                                                                Your browser does not support the audio tag.
+                                                            </audio>
+                                                            <div style='max-width:350px' id='audio-control9'>
+                                                                <div class='card'>
+                                                                    <div class='card-body'>
+                                                                        <input type='hidden' id='audio-player-status9' value='0' />
+                                                                        <input type='hidden' id='audio-player-update9' value='0' />
+                                                                        <a class='btn btn-app' onclick='audio9()'>
+                                                                            <i class='fa fa-play' id='audio-player-judul-logo9'></i> <span id='audio-player-judul9'>Play</span>
+                                                                        </a>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>";
                                                 } else {
                                                     echo "File tidak didukung!";
                                                 }
@@ -404,7 +539,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                 if (in_array($ext, $image)) {
                                                     echo "<img src='$homeurl/files/$soal[fileC]' class='img-responsive' style='max-width:300px;'/>";
                                                 } elseif (in_array($ext, $audio)) {
-                                                    echo "<audio controls='controls' ><source src='$homeurl/files/$soal[fileC]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                    echo "  <audio volume='1.0' id='audio-player10' onended='audio_ended10()'>
+                                                                <source src='$homeurl/files/$soal[fileC]' type='audio/$ext' style='width:100%;'/>
+                                                                Your browser does not support the audio tag.
+                                                            </audio>
+                                                            <div style='max-width:350px' id='audio-control10'>
+                                                                <div class='card'>
+                                                                    <div class='card-body'>
+                                                                        <input type='hidden' id='audio-player-status10' value='0' />
+                                                                        <input type='hidden' id='audio-player-update10' value='0' />
+                                                                        <a class='btn btn-app' onclick='audio10()'>
+                                                                            <i class='fa fa-play' id='audio-player-judul-logo10'></i> <span id='audio-player-judul10'>Play</span>
+                                                                        </a>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>";
                                                 } else {
                                                     echo "File tidak didukung!";
                                                 }
@@ -429,7 +579,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                     if (in_array($ext, $image)) {
                                                         echo "<img src='$homeurl/files/$soal[fileD]' class='img-responsive' style='max-width:300px;'/>";
                                                     } elseif (in_array($ext, $audio)) {
-                                                        echo "<audio controls='controls' ><source src='$homeurl/files/$soal[fileD]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                        echo "  <audio volume='1.0' id='audio-player11' onended='audio_ended11()'>
+                                                                    <source src='$homeurl/files/$soal[fileD]' type='audio/$ext' style='width:100%;'/>
+                                                                    Your browser does not support the audio tag.
+                                                                </audio>
+                                                                <div style='max-width:350px' id='audio-control11'>
+                                                                    <div class='card'>
+                                                                        <div class='card-body'>
+                                                                            <input type='hidden' id='audio-player-status11' value='0' />
+                                                                            <input type='hidden' id='audio-player-update11' value='0' />
+                                                                            <a class='btn btn-app' onclick='audio11()'>
+                                                                                <i class='fa fa-play' id='audio-player-judul-logo11'></i> <span id='audio-player-judul11'>Play</span>
+                                                                            </a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>";
                                                     } else {
                                                         echo "File tidak didukung!";
                                                     }
@@ -456,7 +621,22 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                                                     if (in_array($ext, $image)) {
                                                         echo "<img src='$homeurl/files/$soal[fileE]' class='img-responsive' style='max-width:300px;'/>";
                                                     } elseif (in_array($ext, $audio)) {
-                                                        echo "<audio controls='controls' ><source src='$homeurl/files/$soal[fileE]' type='audio/$ext' style='width:100%;'/>Your browser does not support the audio tag.</audio>";
+                                                        echo "  <audio volume='1.0' id='audio-player12' onended='audio_ended12()'>
+                                                                    <source src='$homeurl/files/$soal[fileE]' type='audio/$ext' style='width:100%;'/>
+                                                                    Your browser does not support the audio tag.
+                                                                </audio>
+                                                                <div style='max-width:350px' id='audio-control12'>
+                                                                    <div class='card'>
+                                                                        <div class='card-body'>
+                                                                            <input type='hidden' id='audio-player-status12' value='0' />
+                                                                            <input type='hidden' id='audio-player-update12' value='0' />
+                                                                            <a class='btn btn-app' onclick='audio12()'>
+                                                                                <i class='fa fa-play' id='audio-player-judul-logo12'></i> <span id='audio-player-judul12'>Play</span>
+                                                                            </a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>";
                                                     } else {
                                                         echo "File tidak didukung!";
                                                     }
@@ -574,6 +754,368 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
     </script>
     <script>
         MathJax.Hub.Typeset()
+    </script>
+    <script>
+        function audio(){
+            var audio_player_status = $('#audio-player-status').val();
+            var audio_player_update = $('#audio-player-update').val();
+            
+            if(audio_player_status==0){
+                $('#audio-player-status').val('1');
+                $('#audio-player').trigger('play');
+                $('#audio-player-judul').html('Pause');
+                $('#audio-player-judul-logo').removeClass('fa-play');
+                $('#audio-player-judul-logo').addClass('fa-pause');
+            }else{
+                $('#audio-player-status').val('0');
+                $('#audio-player').trigger('pause');
+                $('#audio-player-judul').html('Play');
+                $('#audio-player-judul-logo').removeClass('fa-pause');
+                $('#audio-player-judul-logo').addClass('fa-play');
+            }
+        }
+
+        function audio_ended(){
+            if(status==1){
+                $('#audio-control').addClass('hide');
+            }else{
+                $('#audio-player-status').val('0');
+                $('#audio-player-judul').html('Play');
+                $('#audio-player-judul-logo').removeClass('fa-pause');
+                $('#audio-player-judul-logo').addClass('fa-play');
+            }
+        }
+
+        function audio2(){
+            var audio_player_status2 = $('#audio-player-status2').val();
+            var audio_player_update2 = $('#audio-player-update2').val();
+            
+            if(audio_player_status2==0){
+                $('#audio-player-status2').val('1');
+                $('#audio-player2').trigger('play');
+                $('#audio-player-judul2').html('Pause');
+                $('#audio-player-judul-logo2').removeClass('fa-play');
+                $('#audio-player-judul-logo2').addClass('fa-pause');
+            }else{
+                $('#audio-player-status2').val('0');
+                $('#audio-player2').trigger('pause');
+                $('#audio-player-judul2').html('Play');
+                $('#audio-player-judul-logo2').removeClass('fa-pause');
+                $('#audio-player-judul-logo2').addClass('fa-play');
+            }
+        }
+
+        function audio_ended2(){
+            if(status==1){
+                $('#audio-control2').addClass('hide');
+            }else{
+                $('#audio-player-status2').val('0');
+                $('#audio-player-judul2').html('Play');
+                $('#audio-player-judul-logo2').removeClass('fa-pause');
+                $('#audio-player-judul-logo2').addClass('fa-play');
+            }
+        }
+
+        function audio3(){
+            var audio_player_status3= $('#audio-player-status3').val();
+            var audio_player_update3 = $('#audio-player-update3').val();
+            
+            if(audio_player_status3==0){
+                $('#audio-player-status3').val('1');
+                $('#audio-player3').trigger('play');
+                $('#audio-player-judul3').html('Pause');
+                $('#audio-player-judul-logo3').removeClass('fa-play');
+                $('#audio-player-judul-logo3').addClass('fa-pause');
+            }else{
+                $('#audio-player-status3').val('0');
+                $('#audio-player3').trigger('pause');
+                $('#audio-player-judul3').html('Play');
+                $('#audio-player-judul-logo3').removeClass('fa-pause');
+                $('#audio-player-judul-logo3').addClass('fa-play');
+            }
+        }
+
+        function audio_ended3(){
+            if(status==1){
+                $('#audio-control3').addClass('hide');
+            }else{
+                $('#audio-player-status3').val('0');
+                $('#audio-player-judul3').html('Play');
+                $('#audio-player-judul-logo3').removeClass('fa-pause');
+                $('#audio-player-judul-logo3').addClass('fa-play');
+            }
+        }
+
+        function audio4(){
+            var audio_player_status4 = $('#audio-player-status4').val();
+            var audio_player_update4 = $('#audio-player-update4').val();
+            
+            if(audio_player_status4==0){
+                $('#audio-player-status4').val('1');
+                $('#audio-player4').trigger('play');
+                $('#audio-player-judul4').html('Pause');
+                $('#audio-player-judul-logo4').removeClass('fa-play');
+                $('#audio-player-judul-logo4').addClass('fa-pause');
+            }else{
+                $('#audio-player-status4').val('0');
+                $('#audio-player4').trigger('pause');
+                $('#audio-player-judul4').html('Play');
+                $('#audio-player-judul-logo4').removeClass('fa-pause');
+                $('#audio-player-judul-logo4').addClass('fa-play');
+            }
+        }
+
+        function audio_ended4(){
+            if(status==1){
+                $('#audio-control4').addClass('hide');
+            }else{
+                $('#audio-player-status4').val('0');
+                $('#audio-player-judul4').html('Play');
+                $('#audio-player-judul-logo4').removeClass('fa-pause');
+                $('#audio-player-judul-logo4').addClass('fa-play');
+            }
+        }
+
+        function audio5(){
+            var audio_player_status5 = $('#audio-player-status5').val();
+            var audio_player_update5 = $('#audio-player-update5').val();
+            
+            if(audio_player_status5==0){
+                $('#audio-player-status5').val('1');
+                $('#audio-player5').trigger('play');
+                $('#audio-player-judul5').html('Pause');
+                $('#audio-player-judul-logo5').removeClass('fa-play');
+                $('#audio-player-judul-logo5').addClass('fa-pause');
+            }else{
+                $('#audio-player-status5').val('0');
+                $('#audio-player5').trigger('pause');
+                $('#audio-player-judul5').html('Play');
+                $('#audio-player-judul-logo5').removeClass('fa-pause');
+                $('#audio-player-judul-logo5').addClass('fa-play');
+            }
+        }
+
+        function audio_ended5(){
+            if(status==1){
+                $('#audio-control5').addClass('hide');
+            }else{
+                $('#audio-player-status5').val('0');
+                $('#audio-player-judul5').html('Play');
+                $('#audio-player-judul-logo5').removeClass('fa-pause');
+                $('#audio-player-judul-logo5').addClass('fa-play');
+            }
+        }
+
+        function audio6(){
+            var audio_player_status6 = $('#audio-player-status6').val();
+            var audio_player_update6 = $('#audio-player-update6').val();
+            
+            if(audio_player_status6==0){
+                $('#audio-player-status6').val('1');
+                $('#audio-player6').trigger('play');
+                $('#audio-player-judul6').html('Pause');
+                $('#audio-player-judul-logo6').removeClass('fa-play');
+                $('#audio-player-judul-logo6').addClass('fa-pause');
+            }else{
+                $('#audio-player-status6').val('0');
+                $('#audio-player6').trigger('pause');
+                $('#audio-player-judul6').html('Play');
+                $('#audio-player-judul-logo6').removeClass('fa-pause');
+                $('#audio-player-judul-logo6').addClass('fa-play');
+            }
+        }
+
+        function audio_ended6(){
+            if(status==1){
+                $('#audio-control6').addClass('hide');
+            }else{
+                $('#audio-player-status6').val('0');
+                $('#audio-player-judul6').html('Play');
+                $('#audio-player-judul-logo6').removeClass('fa-pause');
+                $('#audio-player-judul-logo6').addClass('fa-play');
+            }
+        }
+
+        function audio7(){
+            var audio_player_status7 = $('#audio-player-status7').val();
+            var audio_player_update7 = $('#audio-player-update7').val();
+            
+            if(audio_player_status7==0){
+                $('#audio-player-status7').val('1');
+                $('#audio-player7').trigger('play');
+                $('#audio-player-judul7').html('Pause');
+                $('#audio-player-judul-logo7').removeClass('fa-play');
+                $('#audio-player-judul-logo7').addClass('fa-pause');
+            }else{
+                $('#audio-player-status7').val('0');
+                $('#audio-player7').trigger('pause');
+                $('#audio-player-judul7').html('Play');
+                $('#audio-player-judul-logo7').removeClass('fa-pause');
+                $('#audio-player-judul-logo7').addClass('fa-play');
+            }
+        }
+
+        function audio_ended7(){
+            if(status==1){
+                $('#audio-control7').addClass('hide');
+            }else{
+                $('#audio-player-status7').val('0');
+                $('#audio-player-judul7').html('Play');
+                $('#audio-player-judul-logo7').removeClass('fa-pause');
+                $('#audio-player-judul-logo7').addClass('fa-play');
+            }
+        }
+
+        function audio8(){
+            var audio_player_status8 = $('#audio-player-status8').val();
+            var audio_player_update8 = $('#audio-player-update8').val();
+            
+            if(audio_player_status8==0){
+                $('#audio-player-status8').val('1');
+                $('#audio-player8').trigger('play');
+                $('#audio-player-judul8').html('Pause');
+                $('#audio-player-judul-logo8').removeClass('fa-play');
+                $('#audio-player-judul-logo8').addClass('fa-pause');
+            }else{
+                $('#audio-player-status8').val('0');
+                $('#audio-player8').trigger('pause');
+                $('#audio-player-judul8').html('Play');
+                $('#audio-player-judul-logo8').removeClass('fa-pause');
+                $('#audio-player-judul-logo8').addClass('fa-play');
+            }
+        }
+
+        function audio_ended8(){
+            if(status==1){
+                $('#audio-control8').addClass('hide');
+            }else{
+                $('#audio-player-status8').val('0');
+                $('#audio-player-judul8').html('Play');
+                $('#audio-player-judul-logo8').removeClass('fa-pause');
+                $('#audio-player-judul-logo8').addClass('fa-play');
+            }
+        }
+
+        function audio9(){
+            var audio_player_status9 = $('#audio-player-status9').val();
+            var audio_player_update9 = $('#audio-player-update9').val();
+            
+            if(audio_player_status9==0){
+                $('#audio-player-status9').val('1');
+                $('#audio-player9').trigger('play');
+                $('#audio-player-judul9').html('Pause');
+                $('#audio-player-judul-logo9').removeClass('fa-play');
+                $('#audio-player-judul-logo9').addClass('fa-pause');
+            }else{
+                $('#audio-player-status9').val('0');
+                $('#audio-player9').trigger('pause');
+                $('#audio-player-judul9').html('Play');
+                $('#audio-player-judul-logo9').removeClass('fa-pause');
+                $('#audio-player-judul-logo9').addClass('fa-play');
+            }
+        }
+
+        function audio_ended9(){
+            if(status==1){
+                $('#audio-control9').addClass('hide');
+            }else{
+                $('#audio-player-status9').val('0');
+                $('#audio-player-judul9').html('Play');
+                $('#audio-player-judul-logo9').removeClass('fa-pause');
+                $('#audio-player-judul-logo9').addClass('fa-play');
+            }
+        }
+
+        function audio10(){
+            var audio_player_status10 = $('#audio-player-status10').val();
+            var audio_player_update10 = $('#audio-player-update10').val();
+            
+            if(audio_player_status10==0){
+                $('#audio-player-status10').val('1');
+                $('#audio-player10').trigger('play');
+                $('#audio-player-judul10').html('Pause');
+                $('#audio-player-judul-logo10').removeClass('fa-play');
+                $('#audio-player-judul-logo10').addClass('fa-pause');
+            }else{
+                $('#audio-player-status10').val('0');
+                $('#audio-player10').trigger('pause');
+                $('#audio-player-judul10').html('Play');
+                $('#audio-player-judul-logo10').removeClass('fa-pause');
+                $('#audio-player-judul-logo10').addClass('fa-play');
+            }
+        }
+
+        function audio_ended10(){
+            if(status==1){
+                $('#audio-control10').addClass('hide');
+            }else{
+                $('#audio-player-status10').val('0');
+                $('#audio-player-judul10').html('Play');
+                $('#audio-player-judul-logo10').removeClass('fa-pause');
+                $('#audio-player-judul-logo10').addClass('fa-play');
+            }
+        }
+
+        function audio11(){
+            var audio_player_status11 = $('#audio-player-status11').val();
+            var audio_player_update11 = $('#audio-player-update11').val();
+            
+            if(audio_player_status11==0){
+                $('#audio-player-status11').val('1');
+                $('#audio-player11').trigger('play');
+                $('#audio-player-judul11').html('Pause');
+                $('#audio-player-judul-logo11').removeClass('fa-play');
+                $('#audio-player-judul-logo11').addClass('fa-pause');
+            }else{
+                $('#audio-player-status11').val('0');
+                $('#audio-player11').trigger('pause');
+                $('#audio-player-judul11').html('Play');
+                $('#audio-player-judul-logo11').removeClass('fa-pause');
+                $('#audio-player-judul-logo11').addClass('fa-play');
+            }
+        }
+
+        function audio_ended11(){
+            if(status==1){
+                $('#audio-control11').addClass('hide');
+            }else{
+                $('#audio-player-status11').val('0');
+                $('#audio-playerl').html('Play');
+                $('#audio-player-judul11').html('Play');
+                $('#audio-player-judul-logo11').removeClass('fa-pause');
+                $('#audio-player-judul-logo11').addClass('fa-play');
+            }
+        }
+
+        function audio12(){
+            var audio_player_status12 = $('#audio-player-status12').val();
+            var audio_player_update12 = $('#audio-player-update12').val();
+            
+            if(audio_player_status12==0){
+                $('#audio-player-status12').val('1');
+                $('#audio-player12').trigger('play');
+                $('#audio-player-judul12').html('Pause');
+                $('#audio-player-judul-logo12').removeClass('fa-play');
+                $('#audio-player-judul-logo12').addClass('fa-pause');
+            }else{
+                $('#audio-player-status12').val('0');
+                $('#audio-player12').trigger('pause');
+                $('#audio-player-judul12').html('Play');
+                $('#audio-player-judul-logo12').removeClass('fa-pause');
+                $('#audio-player-judul-logo12').addClass('fa-play');
+            }
+        }
+
+        function audio_ended12(){
+            if(status==1){
+                $('#audio-control12').addClass('hide');
+            }else{
+                $('#audio-player-status12').val('0');
+                $('#audio-player-judul12').html('Play');
+                $('#audio-player-judul-logo12').removeClass('fa-pause');
+                $('#audio-player-judul-logo12').addClass('fa-play');
+            }
+        }
     </script>
 <?php } ?>
 <?php
