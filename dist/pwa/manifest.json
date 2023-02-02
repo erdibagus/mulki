@@ -5,7 +5,7 @@
  "background_color": "#FFFFFF",
  "theme_color": "#0069d9",
  "display": "standalone",
- "start_url": "/mulki",
+ "start_url": "/",
  "icons": [
   {
    "src": ".\/../img/favicon.png",
