@@ -877,8 +877,10 @@ $tglsekarang = time();
                                                                         3
                                                                         <?php elseif($value == "D"): ?>
                                                                         4
-                                                                        <?php else: ?>
+                                                                        <?php elseif($value == "E"): ?>
                                                                         5
+                                                                        <?php else: ?>
+                                                                        x
                                                                         <?php endif; ?>
                                                                     </td> 
                                                                     <td style='text-align:center'><?= $status ?></td>
