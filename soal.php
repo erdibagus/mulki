@@ -766,7 +766,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul').html('Pause');
                 $('#audio-player-judul-logo').removeClass('fa-play');
                 $('#audio-player-judul-logo').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status==1){
                 $('#audio-player-status').val('0');
                 $('#audio-player').trigger('pause');
                 $('#audio-player-judul').html('Play');
@@ -776,14 +776,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended(){
-            if(status==1){
-                $('#audio-control').addClass('hide');
-            }else{
-                $('#audio-player-status').val('0');
-                $('#audio-player-judul').html('Play');
-                $('#audio-player-judul-logo').removeClass('fa-pause');
-                $('#audio-player-judul-logo').addClass('fa-play');
-            }
+                $('#audio-player-status').val('2');
         }
 
         function audio2(){
@@ -796,7 +789,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul2').html('Pause');
                 $('#audio-player-judul-logo2').removeClass('fa-play');
                 $('#audio-player-judul-logo2').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status2==1){
                 $('#audio-player-status2').val('0');
                 $('#audio-player2').trigger('pause');
                 $('#audio-player-judul2').html('Play');
@@ -806,14 +799,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended2(){
-            if(status==1){
-                $('#audio-control2').addClass('hide');
-            }else{
-                $('#audio-player-status2').val('0');
-                $('#audio-player-judul2').html('Play');
-                $('#audio-player-judul-logo2').removeClass('fa-pause');
-                $('#audio-player-judul-logo2').addClass('fa-play');
-            }
+                $('#audio-player-status2').val('2');       
         }
 
         function audio3(){
@@ -826,7 +812,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul3').html('Pause');
                 $('#audio-player-judul-logo3').removeClass('fa-play');
                 $('#audio-player-judul-logo3').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status3==1){
                 $('#audio-player-status3').val('0');
                 $('#audio-player3').trigger('pause');
                 $('#audio-player-judul3').html('Play');
@@ -836,14 +822,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended3(){
-            if(status==1){
-                $('#audio-control3').addClass('hide');
-            }else{
-                $('#audio-player-status3').val('0');
-                $('#audio-player-judul3').html('Play');
-                $('#audio-player-judul-logo3').removeClass('fa-pause');
-                $('#audio-player-judul-logo3').addClass('fa-play');
-            }
+            
+                $('#audio-player-status3').val('2');
+                
         }
 
         function audio4(){
@@ -856,7 +837,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul4').html('Pause');
                 $('#audio-player-judul-logo4').removeClass('fa-play');
                 $('#audio-player-judul-logo4').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status4==1){
                 $('#audio-player-status4').val('0');
                 $('#audio-player4').trigger('pause');
                 $('#audio-player-judul4').html('Play');
@@ -866,14 +847,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended4(){
-            if(status==1){
-                $('#audio-control4').addClass('hide');
-            }else{
-                $('#audio-player-status4').val('0');
-                $('#audio-player-judul4').html('Play');
-                $('#audio-player-judul-logo4').removeClass('fa-pause');
-                $('#audio-player-judul-logo4').addClass('fa-play');
-            }
+            
+                $('#audio-player-status4').val('2');
+                
         }
 
         function audio5(){
@@ -886,7 +862,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul5').html('Pause');
                 $('#audio-player-judul-logo5').removeClass('fa-play');
                 $('#audio-player-judul-logo5').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status5==1){
                 $('#audio-player-status5').val('0');
                 $('#audio-player5').trigger('pause');
                 $('#audio-player-judul5').html('Play');
@@ -896,14 +872,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended5(){
-            if(status==1){
-                $('#audio-control5').addClass('hide');
-            }else{
-                $('#audio-player-status5').val('0');
-                $('#audio-player-judul5').html('Play');
-                $('#audio-player-judul-logo5').removeClass('fa-pause');
-                $('#audio-player-judul-logo5').addClass('fa-play');
-            }
+            
+                $('#audio-player-status5').val('2');
+                
         }
 
         function audio6(){
@@ -916,7 +887,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul6').html('Pause');
                 $('#audio-player-judul-logo6').removeClass('fa-play');
                 $('#audio-player-judul-logo6').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status6==1){
                 $('#audio-player-status6').val('0');
                 $('#audio-player6').trigger('pause');
                 $('#audio-player-judul6').html('Play');
@@ -926,14 +897,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended6(){
-            if(status==1){
-                $('#audio-control6').addClass('hide');
-            }else{
-                $('#audio-player-status6').val('0');
-                $('#audio-player-judul6').html('Play');
-                $('#audio-player-judul-logo6').removeClass('fa-pause');
-                $('#audio-player-judul-logo6').addClass('fa-play');
-            }
+            
+                $('#audio-player-status6').val('2');
+                
         }
 
         function audio7(){
@@ -946,7 +912,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul7').html('Pause');
                 $('#audio-player-judul-logo7').removeClass('fa-play');
                 $('#audio-player-judul-logo7').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status7==1){
                 $('#audio-player-status7').val('0');
                 $('#audio-player7').trigger('pause');
                 $('#audio-player-judul7').html('Play');
@@ -956,14 +922,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended7(){
-            if(status==1){
-                $('#audio-control7').addClass('hide');
-            }else{
-                $('#audio-player-status7').val('0');
-                $('#audio-player-judul7').html('Play');
-                $('#audio-player-judul-logo7').removeClass('fa-pause');
-                $('#audio-player-judul-logo7').addClass('fa-play');
-            }
+           
+                $('#audio-player-status7').val('2');
+                
         }
 
         function audio8(){
@@ -976,7 +937,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul8').html('Pause');
                 $('#audio-player-judul-logo8').removeClass('fa-play');
                 $('#audio-player-judul-logo8').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status8==1){
                 $('#audio-player-status8').val('0');
                 $('#audio-player8').trigger('pause');
                 $('#audio-player-judul8').html('Play');
@@ -986,14 +947,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended8(){
-            if(status==1){
-                $('#audio-control8').addClass('hide');
-            }else{
-                $('#audio-player-status8').val('0');
-                $('#audio-player-judul8').html('Play');
-                $('#audio-player-judul-logo8').removeClass('fa-pause');
-                $('#audio-player-judul-logo8').addClass('fa-play');
-            }
+            
+                $('#audio-player-status8').val('2');
+                
         }
 
         function audio9(){
@@ -1006,7 +962,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul9').html('Pause');
                 $('#audio-player-judul-logo9').removeClass('fa-play');
                 $('#audio-player-judul-logo9').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status9==1){
                 $('#audio-player-status9').val('0');
                 $('#audio-player9').trigger('pause');
                 $('#audio-player-judul9').html('Play');
@@ -1016,14 +972,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended9(){
-            if(status==1){
-                $('#audio-control9').addClass('hide');
-            }else{
-                $('#audio-player-status9').val('0');
-                $('#audio-player-judul9').html('Play');
-                $('#audio-player-judul-logo9').removeClass('fa-pause');
-                $('#audio-player-judul-logo9').addClass('fa-play');
-            }
+            
+                $('#audio-player-status9').val('2');
+                
         }
 
         function audio10(){
@@ -1036,7 +987,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul10').html('Pause');
                 $('#audio-player-judul-logo10').removeClass('fa-play');
                 $('#audio-player-judul-logo10').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status10==1){
                 $('#audio-player-status10').val('0');
                 $('#audio-player10').trigger('pause');
                 $('#audio-player-judul10').html('Play');
@@ -1046,14 +997,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended10(){
-            if(status==1){
-                $('#audio-control10').addClass('hide');
-            }else{
-                $('#audio-player-status10').val('0');
-                $('#audio-player-judul10').html('Play');
-                $('#audio-player-judul-logo10').removeClass('fa-pause');
-                $('#audio-player-judul-logo10').addClass('fa-play');
-            }
+            
+                $('#audio-player-status10').val('2');
+                
         }
 
         function audio11(){
@@ -1066,7 +1012,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul11').html('Pause');
                 $('#audio-player-judul-logo11').removeClass('fa-play');
                 $('#audio-player-judul-logo11').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status11==1){
                 $('#audio-player-status11').val('0');
                 $('#audio-player11').trigger('pause');
                 $('#audio-player-judul11').html('Play');
@@ -1076,15 +1022,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended11(){
-            if(status==1){
-                $('#audio-control11').addClass('hide');
-            }else{
-                $('#audio-player-status11').val('0');
-                $('#audio-playerl').html('Play');
-                $('#audio-player-judul11').html('Play');
-                $('#audio-player-judul-logo11').removeClass('fa-pause');
-                $('#audio-player-judul-logo11').addClass('fa-play');
-            }
+            
+                $('#audio-player-status11').val('2');
+                
         }
 
         function audio12(){
@@ -1097,7 +1037,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
                 $('#audio-player-judul12').html('Pause');
                 $('#audio-player-judul-logo12').removeClass('fa-play');
                 $('#audio-player-judul-logo12').addClass('fa-pause');
-            }else{
+            }else if(audio_player_status12==1){
                 $('#audio-player-status12').val('0');
                 $('#audio-player12').trigger('pause');
                 $('#audio-player-judul12').html('Play');
@@ -1107,14 +1047,9 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
         }
 
         function audio_ended12(){
-            if(status==1){
-                $('#audio-control12').addClass('hide');
-            }else{
-                $('#audio-player-status12').val('0');
-                $('#audio-player-judul12').html('Play');
-                $('#audio-player-judul-logo12').removeClass('fa-pause');
-                $('#audio-player-judul-logo12').addClass('fa-play');
-            }
+            
+                $('#audio-player-status12').val('2');
+                
         }
     </script>
 <?php } ?>
